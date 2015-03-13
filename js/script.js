@@ -1,16 +1,23 @@
-var divs = document.getElementsByClassName('alert');
-for(var i=0; i<divs.length; i++) {
-  divs[i].addEventListener("click", highlightThis);
-  /*
-  divs[i].addEventListener("click", highlightThis, true);
-  divs[i].addEventListener("click", highlightThis, false);*/
-}
+var demoApp = angular.module('demoApp', [
+	'ngRoute',
+	'movieControllers'
+]);
 
-function highlightThis(event) {
-    //event.stopPropagation();
-  
-    var backgroundColor = this.style.backgroundColor;
-    this.style.backgroundColor='yellow';
-    alert(this.className);
-    this.style.backgroundColor=backgroundColor;
-}
+demoApp.config(['$routeProvider', function($routeProvider) {
+	$routeProvider.
+	when('/list', {
+		templateUrl: './partials/list.html',
+		controller: 'SearchController'
+	}).
+	when('/details/:imdbID', {
+		templateUrl: './partials/details.html',
+		controller: 'DetailsController'
+	}).
+	when('/gallery', {
+		templateUrl: './partials/gallery.html',
+		controller: 'GalleryController'
+	}).
+	otherwise({
+		redirectTo: '/list'
+	});
+}]);

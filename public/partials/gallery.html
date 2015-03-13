@@ -1,0 +1,25 @@
+<section class="galleryPage">
+	<div class="galleryButtons">
+			<a ng-click="genreFilter = null" class="button small">All</a>
+			<a ng-click="genreFilter = {genre: 'Action'}" class="button small">Action</a>
+			<a ng-click="genreFilter = {genre: 'Adventure'}" class="button small">Adventure</a>
+			<a ng-click="genreFilter = {genre: 'Crime'}" class="button small">Crime</a>
+			<a ng-click="genreFilter = {genre: 'Comedy'}" class="button small">Comedy</a>
+			<a ng-click="genreFilter = {genre: 'Drama'}" class="button small">Drama</a>
+			<a ng-click="genreFilter = {genre: 'Musical'}" class="button small">Musical</a>
+			<a ng-click="genreFilter = {genre: 'Mystery'}" class="button small">Mystery</a>
+			<a ng-click="genreFilter = {genre: 'Romance'}" class="button small">Romance</a>
+			<a ng-click="genreFilter = {genre: 'Sci-Fi'}" class="button small">Sci-Fi</a>
+			<a ng-click="genreFilter = {genre: 'Thriller'}" class="button small">Thriller</a>
+			<a ng-click="genreFilter = {genre: 'Western'}" class="button small">Western</a>
+	</div>
+
+	<ul class="small-block-grid-3 medium-block-grid-5 moviegrid">
+		<li ng-animate="'animate'" ng-repeat="item in movies | filter:genreFilter">
+			<a href="#/details/{{movies.indexOf(item)}}">
+				<img ng-src="./data/images/{{item.imdbID}}.jpg">
+				<figcaption>{{item.title}}</figcaption>
+			</a>
+		</li>
+	</ul>
+</section>

@@ -1,0 +1,113 @@
+.imdbTitle {
+	text-align: center;
+}
+
+.imdbLinks {
+	color: black;
+	padding: 5px;
+}
+
+figcaption {
+	text-align: center;
+}
+
+.moviegrid {
+	padding-right: 150px;
+	padding-left: 150px;
+
+	li {
+		opacity: 0.9;
+		-webkit-transition: all 0.3s ease-out;
+		-moz-transition: all 0.3s ease-out;
+		-o-transition: all 0.3s ease-out;
+		transition: all 0.3s ease-out;
+	}
+
+	li:hover {
+		opacity: 1;
+		-webkit-transform: scale(1.2);
+		-moz-transform: scale(1.2);
+		-ms-transform: scale(1.2);
+		transform: scale(1.2);
+	}
+}
+
+.movie.ng-enter.ng-enter-active,
+.movie.ng-leave {
+	opacity: 1;
+	height: 80px;
+	overflow: hidden;
+}
+
+.movie.ng-leave.ng-leave-active,
+.movie.ng-enter {
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+.galleryButtons {
+	text-align: center;
+}
+
+.search {
+	background-color: rgba(91, 150, 100, 0.5);
+	border: 1px;
+	border-color: rgba(0, 0, 0, 0);
+	border-radius: 25px;
+	margin-right: 425px;
+	margin-left: 425px;
+	margin-bottom: 10px;
+}
+
+.sortTypeSelect {
+	width: 90%;
+}
+
+.listSearch {
+	width: 90%;
+}
+
+.searchbarCol {
+	margin-top: 15px;
+	margin-left: 10px;
+}
+
+.searchselectCol {
+	margin-left: 10px;
+	p {
+		margin-bottom: -3px;
+	}
+}
+
+.searchdirectionCol {
+	margin-left: 10px;
+}
+
+.movie {
+	background-color: rgba(91, 150, 100, 0.5);
+	border: 1px;
+	border-color: rgba(0, 0, 0, 0);
+	border-radius: 25px;
+	margin-right: 20.312em;
+	margin-left: 20.312em;
+	margin-bottom: 10px;
+	height: 35.375em;
+}
+
+.buttonCol {
+	padding-top: 15px;
+	margin-bottom: -15px;
+}
+
+.leftButton {
+	float: left;
+}
+
+.rightButton {
+	float: right;
+}
+
+.movieTitle {
+	margin-bottom: -15px;
+}

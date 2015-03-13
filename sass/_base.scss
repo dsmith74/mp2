@@ -1,14 +1,124 @@
 @import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather');
 @import url('http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
+@import url('http://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css');
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
 
-
-h1 {
-  font-size: 2.2rem;
-  color: lighten($orange, 25);
+#HomeSection {
+	height: 600px;
+	margin-top: 75px;
+	border-bottom: thin solid black;
+	p {
+		padding-top: 10px;
+		margin: auto;
+		color: black;
+		font-size: 750%;
+		font-family: $cursive;
+		text-align: center;
+	}
+	img {
+		height: 225px;
+		width: 225px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		padding-top: 80px;
+	}
 }
 
-.test {
-  font-size: 1.2rem;
-  color: $blue;
+video {
+	height: 100%;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 }
+
+.myModal {
+	h2 {
+		font-family: $cursive;
+	}
+}
+
+#PortfolioSection {
+	margin-top: 15px;
+	height: 600px;
+}
+
+.carousel {
+	width: 93%;
+	margin-left: 40px;
+	img {
+		height: 600px;
+		width: 100%;
+	}
+}
+
+#AboutSection {
+	margin-top: 25px;
+	background-image: url('../../images/chevron_stripe.png');
+	background-size: 100%;
+	height: 600px;
+}
+
+#myselfIcon {
+	height: 300px;
+	width: 300px;
+	margin-top: 75px;
+	border: 1px;
+	border-color: rgba(0, 0, 0, 0);
+	border-radius: 25px;
+	float: left;
+}
+
+#about_me_title {
+	font-family: $cursive;
+	color: black;
+	float: left;
+	font-size: 500%;
+	margin-top: 100px;
+	margin-left: 80px;
+}
+
+#about_me_textbox {
+	height: 10.937em;
+	/*width: 46.875em;*/
+	float: left;
+	background-color: $green;
+	background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, 
+										rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, 
+										rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, 
+										rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
+	border: 1px;
+	border-color: rgba(0, 0, 0, 0);
+	border-radius: 25px;
+	margin-left: 1.063em;
+	margin-top: 1.563em;
+	p {
+		padding: 0.625em;
+		padding-top: 1.25em;
+		padding-left: 0.938em;
+		font-family: $font-primary;
+		line-height: 1.25em;
+		font-size: 1em;
+	}
+}
+
+#ContactSection {
+	height: 600px;
+	p {
+		font-family: $cursive;
+		font-size: 500%;
+		text-align: center;
+		margin-right: auto;
+		margin-left: auto;
+		color: black;
+		padding-top: 110px;
+		padding-bottom: 50px;
+    }
+}
+
+.footer {
+	height: 75px;
+	background-color: $purple;
+}
+
 

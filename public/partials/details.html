@@ -1,0 +1,35 @@
+<section class="movieInfo">
+	<div class="row" ng-model="movies">
+		<div class="small-8 small-centered columns movie">
+			<div class="row">
+				<div class="small-12 columns buttonCol">
+					<a href="#/details/{{prevItem}}" class="button tiny leftButton">&lt;</a>
+					<a href="#/details/{{nextItem}}" class="button tiny rightButton">&gt;</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-12 columns movieTitle">
+					<h3>{{movies[whichMovie].title}}</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-12 columns">
+					<h5>Rank: {{movies[whichMovie].rank}}</h5>
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-5 columns">
+					<img ng-src="./data/images/{{movies[whichMovie].imdbID}}.jpg">
+				</div>
+				<div class="small-7 columns">
+					<div class="info">
+						<p class="plot">{{movies[whichMovie].plot}}</p>
+						<p><u>Released:</u> {{movies[whichMovie].released}}</p>
+						<p><u>Runtime:</u> {{movies[whichMovie].runtime}}</p>
+						<p><u>Awards:</u> {{movies[whichMovie].awards}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,35 @@
+<section class="searchPage">
+	<div class="search">
+		<div class="row">
+			<div class="small-12 columns searchbarCol">
+				<input class="listSearch" ng-model="query" placeholder="Search for Movies" autofocus>
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-12 columns searchselectCol">
+				<p>Search By:</p>
+				<select class="sortTypeSelect" ng-model="movieOrder">
+					<option value="rank">Rank</option>
+					<option value="title">Title</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-12 columns searchdirectionCol">
+				<input type="radio" ng-model="direction" name = "direction" checked>Ascending &nbsp;
+				<input type="radio" ng-model="direction" name = "direction" value="reverse">Descending<br>
+			</div>
+		</div>
+		
+		
+	</div>
+
+	<ul class="small-block-grid-3 medium-block-grid-5 moviegrid" ng-show="query">
+		<li ng-animate="'animate'" ng-repeat="item in movies | filter: query | orderBy: movieOrder:direction">
+			<a href="#/details/{{movies.indexOf(item)}}">
+				<img ng-src="./data/images/{{item.imdbID}}.jpg">
+				<figcaption>{{item.title}}</figcaption>
+			</a>
+		</li>
+	</ul>
+</section>
